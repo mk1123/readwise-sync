@@ -96,6 +96,7 @@ if __name__ == "__main__":
         seconds=20
     )
     new_data = fetch_from_export_api(last_fetch_was_at.isoformat())
+    print(new_data)
     for idx, book in enumerate(new_data):
         book_title = book["title"]
         source_url = book["source_url"]
