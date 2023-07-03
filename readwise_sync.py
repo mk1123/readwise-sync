@@ -1,7 +1,6 @@
 import datetime
 import requests
 import os
-import json
 import pytz
 
 readwise_token = "3lZVLq2HLf27gLCVqTzVTmvlTcmHMXkdxuEeqKraJtHxoYCyyJ"
@@ -96,9 +95,7 @@ if __name__ == "__main__":
     last_fetch_was_at = datetime.datetime.now(pytz.utc) - datetime.timedelta(
         seconds=20
     )
-    print(last_fetch_was_at.isoformat())
     new_data = fetch_from_export_api(last_fetch_was_at.isoformat())
-    print(json.dumps(new_data, indent=4))
     for idx, book in enumerate(new_data):
         book_title = book["title"]
         source_url = book["source_url"]
