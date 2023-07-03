@@ -93,7 +93,7 @@ def add_highlight_to_zettel(file_path, highlight_text, comment_text):
 
 if __name__ == "__main__":
     last_fetch_was_at = datetime.datetime.now(pytz.utc) - datetime.timedelta(
-        seconds=20
+        seconds=60
     )
     new_data = fetch_from_export_api(last_fetch_was_at.isoformat())
     print(new_data)
