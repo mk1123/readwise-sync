@@ -3,7 +3,7 @@ import requests
 import os
 import pytz
 
-readwise_token = "3lZVLq2HLf27gLCVqTzVTmvlTcmHMXkdxuEeqKraJtHxoYCyyJ"
+readwise_token = os.environ["READWISE_TOKEN"]
 zettel_folder = os.path.expanduser("~/Dropbox/zettel")
 
 
