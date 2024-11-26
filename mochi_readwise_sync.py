@@ -116,9 +116,9 @@ def get_readwise_documents(timestamp):
     return all_documents
 
 def main():
-    # get timestamp for one year ago
-    one_year_ago = datetime.utcnow() - timedelta(days=365)
-    timestamp = one_year_ago.strftime("%Y-%m-%dT%H:%M:%S")
+    # get timestamp for five minutes ago
+    five_minutes_ago = datetime.utcnow() - timedelta(minutes=5)
+    timestamp = five_minutes_ago.strftime("%Y-%m-%dT%H:%M:%S")
     logging.info(f"Checking for Readwise updates since {timestamp}")
 
     # Get recently updated documents from Readwise
